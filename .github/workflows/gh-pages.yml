@@ -28,6 +28,9 @@ jobs:
       - name: Build
         run: |
           npm run docs
+      - name: copy
+        run: |
+          cp packages/stories/src/data/*.tsv docs/
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v1
         with:
